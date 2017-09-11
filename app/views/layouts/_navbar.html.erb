@@ -1,0 +1,19 @@
+
+  <div class="ui segment" style="background-color: #0066cc">
+    <div class="ui secondary menu">
+      <div class="item">
+        <%= link_to 'Home', root_path, class: "ui button" %>
+      </div>
+      <div class="item">
+        <%= link_to 'Posts', posts_path, class: "ui button" %>
+      </div>
+      <div class="item">
+        <%= link_to 'Bio', bio_path([:id]), class: "ui button" %>
+      </div>
+      <div class="right menu">
+        <div class="ui item">
+          <%= link_to 'Logout', destroy_user_session_path, class: "ui button", method: :delete %>
+        </div>
+      </div>
+    </div>
+  </div>

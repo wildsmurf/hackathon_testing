@@ -1,0 +1,13 @@
+<%= stylesheet_link_tag "application" %>
+
+<div class="ui container center aligned">
+  <h1><%= @post.id ? 'Edit Post' : 'Create Post' %></h1>
+
+    <div class="ui form">
+      <%= form_for @post do |f| %>
+        <%= f.label :content, class: "ui left aligned container" %>
+        <%= f.text_field :content, required: true, autofocus: true %>
+        <%= f.submit nil, class: "ui button" %>
+      <% end %>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<h1><%= @post.content %></h1>
+<%= link_to 'Add Comment', new_post_comment_path(@post), class: "mini ui teal button" %>
+<% @comments.each do |comment| %>
+<hr>
+<p style="font-size: x-large"><%= comment.message %></p>
+<%= link_to 'Edit', edit_post_comment_path(@post), class: "mini ui grey button" %>
+<%= link_to 'Delete', post_comment_path(@post, comment), method: :delete, class: "mini ui red button" %>
+<% end %>

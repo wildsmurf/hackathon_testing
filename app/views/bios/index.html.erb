@@ -1,0 +1,16 @@
+<div class="ui container">
+  <div class="ui header">
+    <h1>My Bios</h1>
+    <%= link_to "Create New Bio", new_account_bio_path, class: "ui button primary" %>
+  </div>
+  <div class="sixteen wide mobile eight wide tablet four wide computer column">
+    <div class="ui cards">
+            <div class="ui three buttons">
+              <%= link_to "Show", bio, class: "ui green button" %>
+              <%= link_to "Edit", edit_bio_path(bio), class: "ui yellow button"  %>
+              <%= link_to "Destroy", bio, method: :delete, class: "ui red button", data: {confirm: "Are you sure?"} %>
+            </div>
+      <% end %>
+    </div>
+  </div>
+</div>

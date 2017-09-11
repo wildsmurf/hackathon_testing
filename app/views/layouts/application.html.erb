@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hackathon</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <% if content_for?(:head) %>
+    <%= yield(:head) %>
+<% end %> 
+
+  </head>
+
+  <body>
+  <%= render(partial: 'layouts/navbar') %>
+  <div class="ui container center aligned">
+    <%= yield %>
+  </div>
+  </body>
+</html>

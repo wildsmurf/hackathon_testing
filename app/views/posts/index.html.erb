@@ -1,0 +1,27 @@
+<h1>All Posts</h1>
+<%= link_to 'Create a New Post', new_post_path %>
+<hr >
+
+  <div class="ui feed">
+    <% @posts.each do |post| %>
+    
+    <div class="ui segment">
+      <div class="content">
+        <h2 class="ui left aligned container"><%= link_to post.content, post_path(post) %></h2>
+        <div class="ui left aligned container">
+          <a class="like">
+            <i class="like icon"></i> Nobody has liked this post!
+          </a>
+        </div>
+      </div>
+      <div class="ui container">
+        <button class="ui button teal left aligned">Like <i class="heart icon"></i></button>
+        <%= link_to 'Edit <i class="edit icon"></i>'.html_safe, edit_post_path(post), class: "ui button center aligned" %>
+        <%= link_to 'Delete <i class="trash icon"></i>'.html_safe, post_path(post), class: "ui button red right aligned", method: :delete %>
+      </div>
+    </div>
+   
+    <% end %>
+
+  </div>
+</div>  

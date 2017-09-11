@@ -1,0 +1,13 @@
+<%= stylesheet_link_tag "application" %>
+
+<div class="ui button">
+    <%= link_to 'New Bio', new_bio_path %>
+</div>
+
+<div class="ui button">
+  <%= link_to 'Edit Bio', edit_bio_path %>
+</div>
+
+<div class="container segment">
+    <%= @bio.description %>
+  </div>
